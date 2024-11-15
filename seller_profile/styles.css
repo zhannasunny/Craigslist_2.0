@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* SECTION: USER INFO */
+.hero {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.hero-container {
+  background-color: white;
+  display: flex;
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: calc(100% - 200px); /* Ensure it stays within the viewport */
+}
+/*Store Info Header*/
+.store-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Two equal-width columns */
+  gap: 10px; /* Space between grid items */
+  margin-top: 0px;
+  text-align: left;
+  width: 100%;
+}
+.info-block{
+  margin-bottom:0px;
+}
+.info-item{
+  margin-bottom: 10px;
+}
+.review {
+  grid-column: span 3; /* Make this element span across all 3 columns */
+  margin-top: 20px;
+
+  padding-top: 20px;
+  border-top: 2px solid #f2f2f2; /* Top border line */
+}
+
+/* Flex container for rating value, stars, and reviews count */
+.rating-container {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  gap: 10px; /* Space between the elements */
+}
+.rating-value {
+  font-size: 2rem;
+  color: #333;
+}
+.stars {
+  color: gold;
+  font-size: 1.5rem;
+}
+.star {
+  margin-right: 2px;
+}
+.reviews-count {
+  font-size: 1rem;
+  color: #666;
+}
+/* Flex container for customers reviews */
+.customer-review {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  border-bottom: #111;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.customer-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.customer-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.customer-rating {
+  margin-top: 10px;
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+/* Avatar Styling */
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 295px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.avatar-img {
+  width: 295px;
+  height: 295px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.avatar-name {
+  font-size: 36px;
+  
+  color: #333;
+}
+
+.avatar-description {
+  font-size: 20px;
+  color: #666;
+}
+
+/* SECTION: LISTINGS */
+.listings {
+  margin-top: 0px;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: calc(100% - 200px); /* Ensure it stays within the viewport */
+}
+
+.listings h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Listings Grid Layout */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 20px; /* Space between items */
+}
+
+.listing-item {
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.listing-item img {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.item-meta {
+  color: #666;
+  font-size: 0.85rem;
+  opacity: 0.7; /* Makes it less opaque */
+  text-align: right;
+}
+
+/* SECTION: FOOTER
+/* Footer Navigation Styles */
+.pagination-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #e6e6e6;
+}
+
+.page-link.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
