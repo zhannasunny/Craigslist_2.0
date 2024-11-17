@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="./posting_page.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Cart</h1>
+    <div class="cart-items">
+      <p id="cart-item">No items in cart</p>
+    </div>
+    <a href="./index.html" class="back-link">Continue Shopping</a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cartItem = JSON.parse(localStorage.getItem("cartItem"));
+      const cartItemContainer = document.getElementById("cart-item");
+
+      if (cartItem) {
+        cartItemContainer.innerHTML = `
+          <strong>Product:</strong> ${cartItem.name}<br>
+          <strong>Price:</strong> ${cartItem.price}
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
