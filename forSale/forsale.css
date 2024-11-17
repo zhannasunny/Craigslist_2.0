@@ -11,70 +11,70 @@ h2 {
 }
 
 /* Wrapper for title and categories */
-.for-sale-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Left-align items */
-    max-width: 1200px; /* Matches the width of the listings section */
-    margin: auto; /* Center the entire section */
-    padding: 20px 48px;
-}
-
-#for-sale h2 {
-    margin-left: 0; /* Ensure title is aligned with categories */
-}
 
 /* Category Section */
 #categories {
-    padding: 20px 0;
+    padding: 25px;
     text-align: left;
+    /* background-color: #f9f9f9; Add subtle background color for differentiation */
+    border-radius: 8px;
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: calc(100% - 200px); /* Keep within the viewport */
 }
 
-/* Wrapper to align the title and categories */
-.categories-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Left-align items */
-    max-width: 1200px;
-    margin: auto;
-    padding-left: 48px; /* Match padding for alignment */
+.categories-wrapper h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* Category Icons */
+/* Updated Category Icons Styling */
 .category-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    max-width: 100%; /* Keeps categories within container width */
+    display: flex; /* Change grid to flex for single-line layout */
+    flex-wrap: nowrap; /* Prevent wrapping to keep all categories in one line */
+    gap: 5px; /* Reduce the space between items */
+    overflow-x: auto; /* Add horizontal scrolling if needed */
+    padding: 10px 0;
+    justify-content: space-between; /* Spread the categories evenly */
 }
 
 .category {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100px; /* Make each category box wider */
-    height: 125px; /* Increase height for better proportion */
-    padding: 15px;
+    justify-content: center;
+    border: 1px solid #ddd; /* Add a border for card-like appearance */
+    border-radius: 8px;
+    padding: 10px; /* Reduce padding for smaller size */
+    background-color: #fff;
     text-align: center;
     cursor: pointer;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    transition: background-color 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s; /* Keep hover effects */
+    width: 100px; /* Smaller width for single-line fit */
+    height: 120px; /* Reduce height for better proportion */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .category:hover {
-    background-color: #e0e0e0;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    background-color: #f5f5f5; /* Subtle background change */
 }
 
 .category img {
-    width: 50px; /* Increase icon size */
-    height: 50px;
-    margin-bottom: 8px;
+    width: 40px; /* Smaller icons */
+    height: 40px;
+    margin-bottom: 5px;
+    object-fit: contain; /* Keep aspect ratio */
+    border-radius: 4px; /* Match the rounded style */
 }
 
 .category p {
-    font-size: 14px;
+    font-size: 0.8rem; /* Reduce font size */
     color: #333;
+    margin: 0;
+    text-align: center; /* Keep text aligned */
 }
 
 /* Grid layout for listings */
@@ -127,4 +127,146 @@ h2 {
 .details {
     font-size: 14px;
     color: #777;
+}
+
+/* SECTION: LISTINGS */
+.listings {
+  margin-top: 0px;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 100px;
+  margin-right: 100px;
+  max-width: calc(100% - 200px); /* Ensure it stays within the viewport */
+}
+
+.listings h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Listings Grid Layout */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 20px; /* Space between items */
+}
+
+.listing-item {
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.listing-item img {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.item-meta {
+  color: #666;
+  font-size: 0.75rem;
+  opacity: 0.7; /* Makes it less opaque */
+  text-align: right;
+}
+
+/* SECTION: FOOTER
+/* Footer Navigation Styles */
+.pagination-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #e6e6e6;
+}
+
+.page-link.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+a{
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Ensures it uses the current text color */
+
+}
+
+.category.selected {
+    background-color: #9c9c9c; /* Dark gray background */
+    color: #fff; /* White text for contrast */
+    font-weight: bold; /* Make the text stand out */
+    border: 1px solid #ddd; /* Add a border for card-like appearance */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add depth with a shadow */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
